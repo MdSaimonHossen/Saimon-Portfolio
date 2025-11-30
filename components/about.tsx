@@ -142,7 +142,7 @@ export default function About() {
                 {
                   label: "Portfolio",
                   value: "Behance",
-                  link: "https://www.behance.net/mdsaimonhossen",
+                  link: "https://www.behance.net/saimonhossen",
                   icon: <Mail size={24} strokeWidth={1.5} />,
                 },
                 { label: "Experience", value: "3+ Years", icon: <Clock size={24} strokeWidth={1.5} /> },
