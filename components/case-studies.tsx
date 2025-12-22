@@ -5,6 +5,7 @@ import { ExternalLink } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { AnimatedCard } from "./aceternity/animated-card"
 import Image from "next/image"
+import { projects as sharedProjects } from "./projects"
 
 type Category = "all" | "case-study" | "website" | "mobile-app" | "branding" | "graphic"
 
@@ -16,6 +17,7 @@ interface Project {
   thumbnail: string
   description?: string
   technologies?: string[]
+  pinned?: boolean
 }
 
 export default function CaseStudies() {
@@ -30,21 +32,21 @@ export default function CaseStudies() {
     { id: "graphic", label: "Graphic Design" },
   ]
 
+
   const projects: Project[] = [
     // Case Studies
 
 // components/projects.tsx (projects array এর মধ্যে যেকোনো স্থানে যোগ করো)
 {
   title: "Case Study - Smart Home Gardening Website UI/UX Design",
+  category: ["case-study", "website"],
   description: "Case study on Home Gardening Website.",
   technologies: ["UI/UX", "Figma", "Case Study"],
   link: "https://www.behance.net/gallery/240844389/Case-Study-Smart-Home-Gardening-Website-UIUX-Design", // আপনার link দিন বা '#' রাখো
   gradient: "from-emerald-500 to-lime-400",
   thumbnail: "/images/projects/gardening.jpg",
+  pinned: true,
 },
-
-
-
 
 
     {
@@ -207,8 +209,16 @@ export default function CaseStudies() {
     },
   ]
 
-  const filteredProjects =
-    activeCategory === "all" ? projects : projects.filter((p) => (p.category ?? []).includes(activeCategory))
+  // prefer local case-studies entries (so local thumbnails/fields override the shared projects)
+  const allProjects = [...sharedProjects, ...projects]
+
+  // dedupe by unique link so the same project (even with slightly different titles) doesn't appear twice
+  const mergedProjects = Array.from(new Map(allProjects.map((p) => [p.link, p])).values()) as Project[]
+
+  // Put pinned projects first while preserving relative order
+  mergedProjects.sort((a, b) => (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0))
+
+  const filteredProjects = activeCategory === "all" ? mergedProjects : mergedProjects.filter((p) => (p.category ?? []).includes(activeCategory))
 
   return (
     <section id="case-studies" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/30">

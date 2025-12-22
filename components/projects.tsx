@@ -4,19 +4,19 @@ import { ExternalLink } from "lucide-react"
 import { motion } from "framer-motion"
 import { AnimatedCard } from "./aceternity/animated-card"
 
-export default function Projects() {
-  const projects = [
-
-
+export const projects = [
 
     
     {
       title: "CellFusion Smartphone App",
+      category: ["case-study", "mobile-app"],
       description: "Case study on a smartphone selling mobile app with complete UX research and UI design.",
       technologies: ["UI/UX", "Mobile App", "Figma", "Case Study"],
       link: "https://www.behance.net/gallery/180700151/Case-Study-on-CellFusion-Smartphone-Selling-App",
       gradient: "from-blue-500 to-cyan-500",
+      thumbnail: "/images/projects/cellfusion.png",
     },
+
     {
       title: "London City Dashboard Redesign",
       description: "UI/UX case study for redesigning the London City Dashboard with improved user experience.",
@@ -54,6 +54,7 @@ export default function Projects() {
     },
   ]
 
+  export default function Projects() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
