@@ -44,7 +44,7 @@ export default function Hero() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: prefersReducedMotion ? 0 : 0.8, ease: "easeOut" },
+      transition: { duration: prefersReducedMotion ? 0 : 0.8, ease: [0.0, 0.0, 0.2, 1] as any },
     },
   }
 
@@ -54,7 +54,7 @@ export default function Hero() {
       transition: {
         duration: 4,
         repeat: Number.POSITIVE_INFINITY,
-        ease: "easeInOut",
+        ease: [0.42, 0, 0.58, 1] as any,
       },
     },
   }

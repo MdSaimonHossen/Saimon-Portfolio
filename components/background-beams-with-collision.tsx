@@ -52,7 +52,7 @@ const Beam = ({ beamOptions }: { beamOptions?: BeamOptions }) => {
         delay: delay,
         repeat: Number.POSITIVE_INFINITY,
         repeatDelay: repeatDelay,
-        ease: "linear",
+        ease: [0, 0, 1, 1] as any,
       }}
       className={`absolute w-2 h-2 rounded-full bg-gradient-to-r from-primary via-secondary to-primary blur-sm ${className}`}
     />

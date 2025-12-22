@@ -10,10 +10,12 @@ type Category = "all" | "case-study" | "website" | "mobile-app" | "branding" | "
 
 interface Project {
   title: string
-  category: Category[]
+  category?: Category[]
   link: string
   gradient: string
   thumbnail: string
+  description?: string
+  technologies?: string[]
 }
 
 export default function CaseStudies() {
@@ -206,7 +208,7 @@ export default function CaseStudies() {
   ]
 
   const filteredProjects =
-    activeCategory === "all" ? projects : projects.filter((p) => p.category.includes(activeCategory))
+    activeCategory === "all" ? projects : projects.filter((p) => (p.category ?? []).includes(activeCategory))
 
   return (
     <section id="case-studies" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/30">

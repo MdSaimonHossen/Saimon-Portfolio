@@ -55,7 +55,7 @@ export const SilkBackground = ({
           transition={{
             duration: animationDuration,
             repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
+            ease: [0.42, 0, 0.58, 1] as any,
           }}
           style={{ willChange: "transform" }}
         />
@@ -67,7 +67,7 @@ export const SilkBackground = ({
           transition={{
             duration: animationDuration2,
             repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
+            ease: [0.42, 0, 0.58, 1] as any,
             delay: 1,
           }}
           style={{ willChange: "transform" }}
@@ -80,7 +80,7 @@ export const SilkBackground = ({
               transition={{
                 duration: animationDuration3,
                 repeat: Number.POSITIVE_INFINITY,
-                ease: "easeInOut",
+                ease: [0.42, 0, 0.58, 1] as any,
                 delay: 2,
               }}
               style={{ willChange: "transform" }}
@@ -91,7 +91,7 @@ export const SilkBackground = ({
               transition={{
                 duration: animationDuration4,
                 repeat: Number.POSITIVE_INFINITY,
-                ease: "easeInOut",
+                ease: [0.42, 0, 0.58, 1] as any,
                 delay: 0.5,
               }}
               style={{ willChange: "transform" }}

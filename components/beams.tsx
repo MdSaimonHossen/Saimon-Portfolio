@@ -24,7 +24,7 @@ export const Beams = ({ className = "" }: { className?: string }) => {
         strokeWidth="2"
         initial={{ pathLength: 0 }}
         animate={{ pathLength: 1 }}
-        transition={{ duration: 2, ease: "easeInOut" }}
+        transition={{ duration: 2, ease: [0.42, 0, 0.58, 1] as any }}
       />
       <motion.line
         x1="1200"
@@ -35,7 +35,7 @@ export const Beams = ({ className = "" }: { className?: string }) => {
         strokeWidth="2"
         initial={{ pathLength: 0 }}
         animate={{ pathLength: 1 }}
-        transition={{ duration: 2, ease: "easeInOut", delay: 0.2 }}
+        transition={{ duration: 2, ease: [0.42, 0, 0.58, 1] as any, delay: 0.2 }}
       />
     </svg>
   )
