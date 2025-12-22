@@ -8,18 +8,8 @@ export default function Projects() {
   const projects = [
 
 
-// components/projects.tsx (projects array এর মধ্যে যেকোনো স্থানে যোগ করো)
-{
-  title: "Case Study - Smart Home Gardening Website UI/UX Design",
-  description: "Case study on Home Gardening Website.",
-  technologies: ["UI/UX", "Figma", "Case Study"],
-  link: "https://www.behance.net/gallery/240844389/Case-Study-Smart-Home-Gardening-Website-UIUX-Design", // আপনার link দিন বা '#' রাখো
-  gradient: "from-emerald-500 to-lime-400",
-  thumbnail: "/images/projects/gardening.jpg",
-},
 
-
-
+    
     {
       title: "CellFusion Smartphone App",
       description: "Case study on a smartphone selling mobile app with complete UX research and UI design.",
