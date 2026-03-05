@@ -129,9 +129,9 @@ export default function Hero() {
             
             {/* <motion.a
               // href="/api/resume"
-              // href="https://drive.google.com/file/d/1XQrVvVKVM9kk37X-8cdChYKdqjyseelP/view"
+              // href="https://drive.google.com/file/d/1aZvVJaHFNuiUB2zy0LENE-gVqqkkkfwe/view?usp=drive_link"
               
-              download="https://drive.google.com/file/d/1XQrVvVKVM9kk37X-8cdChYKdqjyseelP/view"
+              download="https://drive.google.com/file/d/1aZvVJaHFNuiUB2zy0LENE-gVqqkkkfwe/view?usp=drive_link"
               className="inline-flex items-center justify-center gap-2 px-8 py-3 border-2 border-primary/50 rounded-lg font-medium hover:bg-primary/10 hover:border-primary transition-all focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               whileHover={prefersReducedMotion ? {} : { scale: 1.05, y: -2 }}
               whileTap={prefersReducedMotion ? {} : { scale: 0.95 }}
@@ -141,7 +141,7 @@ export default function Hero() {
             </motion.a> */}
 
             <motion.a
-              href="https://drive.google.com/file/d/1XQrVvVKVM9kk37X-8cdChYKdqjyseelP/view?export=download"
+              href="https://drive.google.com/file/d/1aZvVJaHFNuiUB2zy0LENE-gVqqkkkfwe/view?usp=drive_link"
               download="Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
