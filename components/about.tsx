@@ -103,7 +103,6 @@ export default function About() {
             </div>
             <div className="max-w-2xl">
               <p className="text-xl text-muted-foreground leading-relaxed mb-6">
-                I'm Md Saimon Hossen, a passionate UI/UX and Graphic designer with{" "}
                 <span className="font-semibold text-foreground">3+ years</span> of experience in the creative industry.
                 I specialize in crafting visually engaging and user-friendly digital experiences using tools like Figma,
                 Adobe XD, Adobe Illustrator, and Adobe Photoshop.
