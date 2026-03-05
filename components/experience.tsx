@@ -6,6 +6,8 @@ import { Calendar, GraduationCap } from "lucide-react"
 export default function Experience() {
   const experiences = [
     {
+      title: "Digital Creative Specialist",
+      company: "MODIF",
       period: "May 2024 – Present",
       location: "Bangladesh",
       highlights: [
